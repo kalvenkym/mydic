@@ -1,7 +1,12 @@
 input.onSound(DetectedSound.Loud, function () {
     dothings()
 })
+
+
 function dothings () {
+    input.onSound(DetectedSound.Loud, function () {
+
+    })
     basic.showLeds(`
         . . . . .
         . . . . .
@@ -144,6 +149,9 @@ function dothings () {
         `)
     myImage.showImage(0)
     music.playTone(554, music.beat(BeatFraction.Quarter))
+    input.onSound(DetectedSound.Loud, function () {
+        dothings()
+    })
 }
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     dothings()
